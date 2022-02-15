@@ -1,0 +1,17 @@
+{
+  "name": "ankita-rai",
+  "version": "1.0.0",
+  "description": "This is my blood Blood Donation Website",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Ankita RAi",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "express-ejs-layouts": "^2.5.1",
+    "mongoose": "^6.2.1"
+  }
+}

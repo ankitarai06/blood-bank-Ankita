@@ -1,0 +1,29 @@
+
+  <%- include("../partials/header.ejs") %>
+
+  <div class="container text-center">
+      <div class="d-md-flex justify-content-center  my-3 text-center px-auto">
+          <div class="card shadow " style="width: 18rem;">
+              <a href="/BloodRequest" class="card-title  btn btn-primary  ">Blood Request Status</a>
+          </div>
+          <div class="card shadow " style="width: 18rem;">
+            <a  href="/DonateRequest" class="card-title btn btn-success">Donate Request </a>
+        </div> 
+        <div class="card shadow " style="width: 18rem;">
+            <a href="/RequestHistory" class="card-title btn btn-warning">Blood Request History</a>
+        </div>
+        <div class="card shadow " style="width: 18rem;">
+            <a href="/Donatehistory" class="card-title btn btn-secondary">Donate history</a>
+        </div>
+      </div>
+  </div>
+
+  <div class="container">
+      
+  <%- include("../partials/requestlist.ejs") %>     
+   
+  </div>
+
+
+  
+  <%- include("../partials/footer.ejs") %>

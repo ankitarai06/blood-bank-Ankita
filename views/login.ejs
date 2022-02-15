@@ -1,0 +1,62 @@
+
+  <a href="/admin" class="ms-auto me-5 my-2 text-muted" data-bs-toggle="modal" data-bs-target="#exampleModal" >Admin</a>
+  <%- include("./partials/message.ejs") %>
+  <div class="container my-auto ">
+      <div class="row  ">
+          <div class="col-6 mx-auto">
+              <div class="card card-body text-center my-3 border border-2  border-success">
+                  <div class="fs-1 fw-bold text-center text-success " style="font-family:'Courier New', Courier, monospace;" >
+                    Blood Donation 
+                  </div>
+                  <div class=" text-success my-3 fs-4 fw-bold " >Log in</div>  
+                  <form action="/" method="post">          
+                     
+                      <div class="form-floating mb-3">
+                          <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email">
+                          <label for="email">Email address</label>
+                        </div>
+                        
+                        
+                       
+                        <div class="form-floating">
+                          <input type="password" class="form-control" id="password" placeholder="password"  name="password">
+                          <label for="password">Password</label>
+                        </div>
+                      <div>
+                        <button class="btn btn-success w-100 my-md-4 my-2   ">Login</button>
+                      </div>
+                  </form>
+                  <p class="text-muted lead" > Don't have an account? <a href="/register" >register </a> </p> 
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <p class="text-muted">Copyright ©2022 All rights reserved by : Ankita Rai </p>
+
+
+
+  <!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Admin Access</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="/adminlogin" method="post">
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="pass_word" placeholder="password" name="password">
+            <label for="pass_word">Password</label>
+          </div>
+          <button class="btn btn-success">Submit</button>
+        </form>
+      </div>
+     
+    </div>
+  </div>
+</div>

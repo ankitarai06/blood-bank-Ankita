@@ -1,0 +1,23 @@
+
+
+body{
+    box-sizing:  border-box;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#main-bg{
+   padding: 0 ;
+   height: 600px;
+    background-image: url("/public/images/blooddonate.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.dash{
+    line-height: .1px;
+   
+}

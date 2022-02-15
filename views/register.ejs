@@ -1,0 +1,42 @@
+
+  <%- include("./partials/message.ejs") %>
+  <div class="container my-auto ">
+      <div class="row  ">
+          <div class="col-6 mx-auto">
+              <div class="card card-body text-center my-3 border border-2  border-success">
+                  <div class="fs-1 fw-bold text-center text-success " style="font-family:'Courier New', Courier, monospace;" >
+                    Blood Donation 
+                  </div>
+                  <div class=" text-success my-3 fs-4 fw-bold " >Registration</div>  
+                  <form action="/register" method="post">          
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="name" placeholder="name" name="name">
+                        <label for="name">Name</label>
+                      </div>
+                     
+                      <div class="form-floating mb-3">
+                          <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email">
+                          <label for="email">Email address</label>
+                        </div>
+                       
+                        <div class="form-floating mb-3">
+                          <input type="password" class="form-control" id="password" placeholder="password"  name="password">
+                          <label for="password">Password</label>
+                        </div>
+                      <div>
+                        <div class="form-floating">
+                            <input type="password" class="form-control" id="password2" placeholder="confirm password"  name="password2">
+                            <label for="password2">Confirm Password</label>
+                          </div>
+                        <div>
+                        <button class="btn btn-success w-100 my-md-4 my-2   ">Register</button>
+                      </div>
+                  </form>
+                  <p class="text-muted lead" > Have an account? <a href="/" >login </a> </p> 
+              </div>
+          </div>
+      </div>
+  </div>
+
+</div>
+  <p class="text-muted ">Copyright ©2022 All rights reserved by : Ankita Rai </p>

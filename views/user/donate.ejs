@@ -1,0 +1,58 @@
+<%- include("../partials/header.ejs") %>
+  <%- include("../partials/message.ejs") %>
+<div class="container">
+    <div class="row ">
+        <div class="col-6 mx-auto">
+            <div class="card card-body text-center my-3 border border-2  border-secondary">
+                <div class="fs-3 text-center text-danger   ">
+                    <i class=" fs-1 las la-sign-in-alt"></i> Blood Donatation Form
+                </div>
+                <div class=" text-danger my-3 fs-5" >Donar Detail</div>
+                <form action="" method="post">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="name" placeholder="name" name = "name">
+                        <label for="name">Name</label>
+                      </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email">
+                        <label for="email">Email address</label>
+                      </div>
+                      <div class="form-floating">
+                        <input type="tel" class="form-control" id="number" placeholder="Phone Number" name="mb_num">
+                        <label for="number">Phone Number</label>
+                      </div>
+                      <div class=" my-3">
+                        <select class="form-select" aria-label="Default select example" name="bloodgroup">
+                            <option selected>Blood Group</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                          </select>
+                      </div>
+                      <div class=" my-3">
+                        <select class="form-select" aria-label="Default select example" name="gender">
+                            <option selected>Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                            
+                          </select>
+                      </div>
+                      <div class="form-floating">
+                        <input type="number" class="form-control" id="bloodunit" placeholder="Blood Unit" name="bloodunit">
+                        <label for="number">Blood Unit</label>
+                      </div>
+                      <button class="btn btn-danger btn-lg my-md-4 my-2  ">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<%- include("../partials/footer.ejs") %>

@@ -1,0 +1,110 @@
+<% if(typeof REQ_RECORD !=='undefined' ) { %>
+    <div class="text-center bg-danger fs-3 text-white py-2 "> Blood Request  </div>
+  <div class="container bg-light mt-2 p-md-3">
+    <div class="row ps-1 fw-bold"> Number of Pending Request : <%= REQ_RECORD.length %>
+    </div>
+
+
+    <% REQ_RECORD.forEach((b)=> { %>
+
+      <div class="row m-1 border border-3 border-dark d-flex justify-content-between align-items-center">
+
+        <div class="col">
+    
+          <div class=" px-1 text-start"> Name : <span> <b>
+                <%= b.data.name %>
+              </b> </span></div>
+          <div class=" px-1 text-start"> Email : <span> <b>
+
+                <%= b.data.email %>
+              </b> </span></div>
+          <div class="px-1 text-start"> BLood Group : <span> <b>
+                <%= b.data.bloodgroup %>
+              </b> </span></div>
+          <div class="px-1 text-start">
+            Numer of Unit : <span> <b>
+                <%= b.data.bloodunit %>
+              </b> </span>
+          </div>
+          <div class="px-1 text-start">
+            <% var date=b.data.date.getFullYear() + '-' + (b.data.date.getMonth()+1) +'-' + b.data.date.getDate() ; %>
+              Date : <span> <b>
+                  <%= date %>
+                </b> </span>
+          </div>
+        </div>
+        <div class="col  text-center ">
+          <button class="btn btn-success " type="submit">
+
+
+            <a href="/blood_REQ_ACCEPT?id=<%= b.ID %> " class="text-decoration-none text-white"> Accept</a>
+          </button>
+          <button class="btn btn-warning">
+            <a href="/blood_REQ_REJECT?id=<%= b.ID %>" class="text-decoration-none text-white"> Reject</a>
+          </button>
+
+        </div>
+
+      </div>
+      <% } ) %>
+
+
+  </div>
+
+  <% } %>
+
+
+  <% if(typeof REQ_RECORD_D !=='undefined' ) { %>
+    <div class="text-center bg-danger fs-3 text-white py-2 "> Blood Donate request  </div>
+  <div class="container bg-light mt-2 p-md-3">
+    <div class="row ps-1 fw-bold"> Number of Pending Request : <%= REQ_RECORD_D.length %>
+    </div>
+
+
+    <% REQ_RECORD_D.forEach((b)=> { %>
+
+      <div class="row m-1 border border-3 border-dark d-flex justify-content-between align-items-center">
+
+        <div class="col">
+    
+          <div class=" px-1 text-start"> Name : <span> <b>
+                <%= b.data.name %>
+              </b> </span></div>
+          <div class=" px-1 text-start"> Email : <span> <b>
+
+                <%= b.data.email %>
+              </b> </span></div>
+          <div class="px-1 text-start"> BLood Group : <span> <b>
+                <%= b.data.bloodgroup %>
+              </b> </span></div>
+          <div class="px-1 text-start">
+            Numer of Unit : <span> <b>
+                <%= b.data.bloodunit %>
+              </b> </span>
+          </div>
+          <div class="px-1 text-start">
+            <% var date=b.data.date.getFullYear() + '-' + (b.data.date.getMonth()+1) +'-' + b.data.date.getDate() ; %>
+              Date : <span> <b>
+                  <%= date %>
+                </b> </span>
+          </div>
+        </div>
+        <div class="col  text-center ">
+          <button class="btn btn-success mb-md-0 mb-1" type="submit">
+
+
+            <a href="/blood_DONATE_ACCEPT?id=<%= b.ID %> " class="text-decoration-none text-white"> Accept</a>
+          </button>
+          <button class="btn btn-warning mt-md-0 mt-1">
+            <a href="/blood_DONATE_REJECT?id=<%= b.ID %>" class="text-decoration-none text-white"> Reject</a>
+          </button>
+
+        </div>
+
+      </div>
+      <% } ) %>
+
+
+  </div>
+
+  <% } %>

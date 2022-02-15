@@ -1,0 +1,68 @@
+    
+<%  if(typeof REQ_PENDING !== 'undefined' ) {   %>
+    <div class="col text-center  fw-bold fs-3"  >
+      Pending Requests
+    </div>
+    <% let i =1 ; %>
+    <div class=" ms-1 mb-2"> Number of Pending  Request : <b> <%= REQ_PENDING.length %></b> </div>
+      <% REQ_PENDING.forEach((r)=>{   %>
+       
+        <div class="card card-body d-flex flex-row  border border-2 border-dark my-2">
+          <p  class="me-2" style="width: fit-content;"> <%= i %>.</p> 
+        <% i++ ; %>
+    <div class="d-md-flex justify-content-between  gap-md-4  ">
+    <p>  Name :  <%= r.name %> </p>
+   <p> Blood Group  : <%= r.bloodgroup %> </p>
+  <p>  Blood Unit : <%= r.bloodunit %></p>
+      <%  var date = r.date.getFullYear() + '-' + (r.date.getMonth()+1) +'-' + r.date.getDate() ;  %>
+   <p>   Date :   <%= date %></p>
+    </div>
+   <div class="my-auto  ms-auto">
+    <button class="btn btn-warning btn-block ">
+      Pending
+    </button>
+   </div>
+        </div>
+      
+          
+  
+    <%    });  }  %>
+      
+     
+      
+    <%  if(typeof REQ_HISTORY !== 'undefined' ) {   %>
+      <div class="col text-center  fw-bold fs-3">
+         Request History 
+      </div>
+      <% let i =1 ; %>
+      <div class=" ms-1 mb-2"> Number of Request : <b> <%= REQ_HISTORY.length %></b> </div>
+        <% REQ_HISTORY.forEach((r)=>{   %>
+          
+          <div class="card card-body d-flex flex-row  border border-2 border-dark my-2 ">
+            <p  class="me-2" style="width: fit-content;"> <%= i %>.</p> 
+            <% i++ ; %>
+      <div class="d-md-flex justify-content-between  gap-md-4  ">
+      <p>  Name :  <%= r.name %> </p>
+     <p> Blood Group  : <%= r.bloodgroup %> </p>
+    <p>  Blood Unit : <%= r.bloodunit %></p>
+        <%  var date = r.date.getFullYear() + '-' + (r.date.getMonth()+1) +'-' + r.date.getDate() ;  %>
+     <p>   Date :   <%= date %></p>
+      </div>
+       <% if(r.Status == "accepted") { %>
+        <div class="my-auto ms-auto ">
+          <button class="btn btn-success btn-block ">
+            accepted
+          </button>
+         </div>
+      <% } else { %>
+        <div class="my-auto ms-auto ">
+          <button class="btn btn-secondary btn-block ">
+           rejected
+          </button>
+         </div>
+     <% } %>
+          </div>
+        
+            
+    
+      <%    });  }  %>
